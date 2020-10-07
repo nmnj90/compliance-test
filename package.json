@@ -1,0 +1,16 @@
+{
+  "name": "node-sass-starter",
+  "version": "1.0.0",
+  "description": "A very quick way to run node-sass locally",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass scss/ -o public/css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "Codeplicity",
+  "license": "WTFPL",
+  "devDependencies": {
+    "node-sass": "^4.6.0",
+    "nodemon": "^1.12.1"
+  }
+}
