@@ -1,0 +1,148 @@
+
+/**************************************** BREAKPOINT ****************************************/
+
+@mixin breakpoint($point) {
+    //breakpoint for desktop device
+    @if $point == desktop {
+        @media (max-width: $desktop) {
+            @content;
+        }
+    }
+
+    //breakpoint for large-laptop device
+    @else if $point == laptop-large {
+        @media (max-width: $laptop-large) {
+            @content;
+        }
+    }
+
+    //breakpoint for laptop device
+    @else if $point == laptop {
+        @media (max-width: $laptop) {
+            @content;
+        }
+    }
+
+    //breakpoint for tablet device
+    @else if $point == tablet {
+        @media (max-width: $tablet) {
+            @content;
+        }
+    }
+
+    //breakpoint for phone device
+    @else if $point == phone {
+        @media (max-width: $phone) {
+            @content;
+        }
+    }
+
+    //breakpoint for min desktop device
+    @else if $point == min-desktop {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+
+     //breakpoint for min laptop-large device
+    @else if $point == min-laptop-large {
+        @media (min-width: $laptop-large) {
+            @content;
+        }
+    }
+
+    //breakpoint for min laptop device
+    @else if $point == min-laptop {
+        @media (min-width: $laptop) {
+            @content;
+        }
+    }
+
+    //breakpoint for min tablet device
+    @else if $point == min-tablet {
+        @media (min-width: $tablet) {
+            @content;
+        }
+    }
+
+    //breakpoint for min phone device
+    @else if $point == min-phone {
+        @media (min-width: $phone) {
+            @content;
+        }
+    }
+
+    //breakpoint min laptop-large max desktop
+    @else if $point == min-laptop-large-max-desktop {
+        @media (min-width: $laptop-large) and (max-width: $desktop) {
+            @content;
+        }
+    }
+
+    //breakpoint min laptop max laptop-large
+    @else if $point == min-laptop-max-laptop-large {
+        @media (min-width: $laptop) and (max-width: $laptop-large) {
+            @content;
+        }
+    }
+
+    //breakpoint min tablet max laptop
+    @else if $point == min-tablet-max-laptop {
+        @media (min-width: $tablet) and (max-width: $laptop) {
+            @content;
+        }
+    }
+
+    //breakpoint min tablet max laptop
+    @else if $point == min-tablet-max-laptop {
+        @media (min-width: $tablet) and (max-width: $laptop) {
+            @content;
+        }
+    }
+
+    //breakpoint min phone max tablet
+    @else if $point == min-phone-max-tablet {
+        @media (min-width: $phone) and (max-width: $tablet) {
+            @content;
+        }
+    }
+}
+
+/**************************************** Placeholder input ****************************************/
+
+@mixin input-placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+/**************************************** GRADIENT ****************************************/
+
+@mixin gradient($color1, $color2) {
+    background: $color2;
+    background: -moz-linear-gradient(top, $color1 0%, $color2 75%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $color1), color-stop(75%, $color2));
+    background: -webkit-linear-gradient(top, $color1 0%, $color2 75%);
+    background: -o-linear-gradient(top, $color1 0%, $color2 75%);
+    background: -ms-linear-gradient(top, $color1 0%, $color2 75%);
+    background: linear-gradient(to bottom, $color1 0%, $color2 75%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+}
+
+
+@mixin gradientradial($gradient_radial_col1,$gradient_radial_col2:$gradient_radial_col1 ){
+    background: $gradient_radial_col1;
+    background: -moz-radial-gradient(center, ellipse cover,  r$gradient_radial_col1 0%, $gradient_radial_col2 100%);
+    background: -webkit-radial-gradient(center, ellipse cover,  $gradient_radial_col1 0%,$gradient_radial_col2 100%);
+    background: radial-gradient(ellipse at center,  $gradient_radial_col1 0%,$gradient_radial_col2 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient_radial_col1', endColorstr='$gradient_radial_col2',GradientType=1 );
+}
