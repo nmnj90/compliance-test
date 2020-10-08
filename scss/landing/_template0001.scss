@@ -2,6 +2,10 @@
   template0001
 ===================================================*/
 
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
 .container {
     max-width: 600px;
     margin: 0 auto;
@@ -9,10 +13,11 @@
 
 .site-header {
     position: absolute;
+    padding-top: 10px;
     top: 0;
     text-align: center;
-    padding-top: 10px;
     width: 100%;
+    z-index: 99;
 }
 
 .logo-header {
@@ -24,6 +29,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0 50px;
+}
+
+.intro-title {
+    color: #ffffff;
+    margin: 0 0 40px;
+    text-align: center;
 }
 
 .intro-grid {
@@ -49,5 +60,7 @@
 .intro-cta-text {
     font-size: 20px;
     line-height: normal;
+    margin: 0;
     text-transform: uppercase;
+    text-align: center;
 }
