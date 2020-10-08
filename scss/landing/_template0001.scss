@@ -2,6 +2,15 @@
   template0001
 ===================================================*/
 
+
+/*=== Global ===*/
+
+$phone: 500px;
+$tablet: 800px;
+$laptop: 1280px;
+$laptop-large: 1338px;
+$desktop: 1525px;
+
 * {
     font-family: 'Montserrat', sans-serif;
 }
@@ -9,7 +18,10 @@
 .container {
     max-width: 600px;
     margin: 0 auto;
+    padding: 0 15px;
 }
+
+/*=== Header ===*/
 
 .site-header {
     position: absolute;
@@ -24,12 +36,17 @@
     display: inline-block;
 }
 
+/*=== main ===*/
+
 .content {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: calc(100vh - 154px);
     padding: 100px 0 50px;
 }
+
+/*=== intro ===*/
 
 .intro-title {
     color: #ffffff;
@@ -39,17 +56,36 @@
 
 .intro-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(120px, auto);
     grid-gap: 20px;
+
+    @include breakpoint(min-phone) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .big {
     grid-column: span 2;
+    grid-row: span 2;
+
+    @include breakpoint(min-phone) {
+        grid-row: span 1;
+    }
 }
 
 .landscape {
-    grid-column: span 3;
+    grid-column: span 2;
+
+    @include breakpoint(min-phone) {
+        grid-column: span 3;
+    }
 }
 
 .intro-cta {
@@ -60,7 +96,101 @@
 .intro-cta-text {
     font-size: 20px;
     line-height: normal;
-    margin: 0;
+    margin: 0 0 50px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.intro-cta-button {
+    @include gradient(rgb(253,70,132),rgb(255,159,140));
+    border-radius: 6px;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/*=== footer ===*/
+
+.site-footer {
+    background-color: #23155C;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 40px 15px 20px;
+
+    @include breakpoint(min-phone) {
+        padding: 70px 15px 40px;
+    }
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1032px;
+    margin: 0 auto;
+
+    @include breakpoint(min-phone) {
+        flex-direction: row;
+    }
+}
+
+.footer-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include breakpoint(min-phone) {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    li {
+        font-size: 12px;
+        list-style: none;
+        padding: 0 0 10px 0;
+
+        &:not(:last-of-type) {
+
+            @include breakpoint(min-phone) {
+                padding: 0 30px 0 0;
+            }
+        }
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    }
+
+    @include breakpoint(min-phone) {
+        flex-direction: row;
+    }
+}
+
+.copyright {
+    margin: 0;
+}
+
+.footer-company-text {
+    margin: 0;
+    text-align: center;
+
+    @include breakpoint(min-phone) {
+        text-align: right;
+    }
 }
