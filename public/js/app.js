@@ -1,46 +1,46 @@
-for(var i = 0; i < document.getElementsByClassName('js_signin_action').length; i++) {
-    document.getElementsByClassName('js_signin_action')[i].addEventListener('click', function(){
-        document.querySelector('#js_signin_wrapper').classList.remove('hide_from_screen');
-        document.querySelector('#js_form_wrapper').classList.remove('signup_active');
-        document.querySelector('#js_signup_wrapper').classList.add('hide_from_screen');
-        document.querySelector('#js_forgot_password_wrapper').classList.add('hide_from_screen');
+for(var i = 0; i < document.getElementsByClassName('js-signin-action').length; i++) {
+    document.getElementsByClassName('js-signin-action')[i].addEventListener('click', function(){
+        document.querySelector('#js-signin-wrapper').classList.remove('hide-from-screen');
+        document.querySelector('#js-form-wrapper').classList.remove('signup-active');
+        document.querySelector('#js-signup-wrapper').classList.add('hide-from-screen');
+        document.querySelector('#js-forgot-password-wrapper').classList.add('hide-from-screen');
     
-        if(document.getElementById('js_signin') && document.getElementById('js_signup')) {
-            document.querySelector('#js_signup').classList.remove('hide');
-            document.querySelector('#js_signin').classList.add('hide');
+        if(document.getElementById('js-signin') && document.getElementById('js-signup')) {
+            document.querySelector('#js-signup').classList.remove('hide');
+            document.querySelector('#js-signin').classList.add('hide');
         }
     });
 }
 
-for (var j = 0; j < document.getElementsByClassName('js_signup_action').length; j++) {
-    document.getElementsByClassName('js_signup_action')[j].addEventListener('click', function(){
-        document.querySelector('#js_signup_wrapper').classList.remove('hide_from_screen');
-        document.querySelector('#js_form_wrapper').classList.add('signup_active');
-        document.querySelector('#js_signin_wrapper').classList.add('hide_from_screen');
-        document.querySelector('#js_forgot_password_wrapper').classList.add('hide_from_screen');
+for (var j = 0; j < document.getElementsByClassName('js-signup-action').length; j++) {
+    document.getElementsByClassName('js-signup-action')[j].addEventListener('click', function(){
+        document.querySelector('#js-signup-wrapper').classList.remove('hide-from-screen');
+        document.querySelector('#js-form-wrapper').classList.add('signup-active');
+        document.querySelector('#js-signin-wrapper').classList.add('hide-from-screen');
+        document.querySelector('#js-forgot-password-wrapper').classList.add('hide-from-screen');
     
-        if (document.getElementById('js_signin') && document.getElementById('js_signup')) {
-            document.querySelector('#js_signin').classList.remove('hide');
-            document.querySelector('#js_signup').classList.add('hide');
+        if (document.getElementById('js-signin') && document.getElementById('js-signup')) {
+            document.querySelector('#js-signin').classList.remove('hide');
+            document.querySelector('#js-signup').classList.add('hide');
         }
     });
 }
 
-document.querySelector('.js_forgot_password_action').addEventListener('click', function(){
-    document.querySelector('#js_forgot_password_wrapper').classList.remove('hide_from_screen');
-    document.querySelector('#js_signin_wrapper').classList.add('hide_from_screen');
-    document.querySelector('#js_signup_wrapper').classList.add('hide_from_screen');
+document.querySelector('.js-forgot-password-action').addEventListener('click', function(){
+    document.querySelector('#js-forgot-password-wrapper').classList.remove('hide-from-screen');
+    document.querySelector('#js-signin-wrapper').classList.add('hide-from-screen');
+    document.querySelector('#js-signup-wrapper').classList.add('hide-from-screen');
 });
 
-for(var k = 0; k < document.getElementsByClassName('js_link').length; k++) {
-    document.getElementsByClassName('js_link')[k].addEventListener('click', function(event) {
+for(var k = 0; k < document.getElementsByClassName('js-link').length; k++) {
+    document.getElementsByClassName('js-link')[k].addEventListener('click', function(event) {
         let linkTarget = event.target.dataset['linkTarget'];
     
         if (linkTarget == undefined) {
             return false;
         }
     
-        let linkedEl = document.getElementsByClassName('js_linked');
+        let linkedEl = document.getElementsByClassName('js-linked');
         let linkedTargetEl = document.querySelector(linkTarget);
     
         if (linkedEl == undefined) {
@@ -60,7 +60,7 @@ for(var k = 0; k < document.getElementsByClassName('js_link').length; k++) {
     })
 }
 
-document.querySelector('.js_link').addEventListener('click', function(event) {
+document.querySelector('.js-link').addEventListener('click', function(event) {
     let linkTarget = event.target.dataset['linkTarget'];
     if (linkTarget) {
         window.scroll({
@@ -72,7 +72,7 @@ document.querySelector('.js_link').addEventListener('click', function(event) {
 
 var addToBodyFormClass = function(event) {
     let linkForm = event.target.dataset['bodyClass'];
-    let links = document.getElementsByClassName('js_link');
+    let links = document.getElementsByClassName('js-link');
 
     if (linkForm == undefined) {
         return false;
