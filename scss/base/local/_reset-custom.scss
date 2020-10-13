@@ -12,3 +12,29 @@ p {
 h1,h2,h3,h4,h5,h6 {
     margin: 0;
 }
+
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.hide-from-screen {
+    position: absolute;
+    left: -10000px !important;
+    top: 0 !important;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=submit],
+select {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;;
+    }
+}
