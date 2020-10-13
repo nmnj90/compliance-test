@@ -359,12 +359,12 @@ $container-spacing: 15px;
                 }
             }
         }
+    }
 
-
-        a {
-            color: #ffffff;
-            text-decoration: none;
-        }
+    a {
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
     }
 
     @include breakpoint(min-phone) {
