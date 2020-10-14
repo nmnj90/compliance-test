@@ -41,6 +41,7 @@
 
     @include breakpoint(min-tablet) {
 	    grid-template-columns: minmax(240px,300px) 10fr 1fr;
+	    overflow: hidden;
     }
 }
 
@@ -112,18 +113,25 @@
 #home,
 #profile,
 #general-settings,
-#pass-change {
-  display: none;
+#pass-change,
+#game {
+	height: 0;
+  	opacity: 0;
+  	visibility: hidden;
 }
 
 #home:target,
 #profile:target,
 #general-settings:target,
-#pass-change {
-  display: block;
+#pass-change:target,
+#game:target {
+	height: auto;
+  	opacity: 1;
+  	visibility: visible;
+  	transition: opacity 1s ease-in;
 }
 
-.member-home-search {
+.members-search {
     max-width: 360px;
     margin: 16px;
 	position: relative;
@@ -148,11 +156,56 @@
 	}
 }
 
-.member-home-wrapper {
-	background-color: #EDEDED;
+.members-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	overflow: hidden;
+
+	@include breakpoint(min-tablet) {
+		overflow: visible;
+	}
 }
 
-.member-home-grid {
+.members-home,
+.members-game,
+.members-my-profile,
+.members-general,
+.members-password,
+.members-game {
+	grid-area: 1/1;
+}
+
+.members-content-wrapper,
+.members-game-wrapper {
+	position: relative;
+
+	&:before {
+		background-color: #EDEDED;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+
+		@include breakpoint(min-tablet) {
+			width: 200%;
+		}
+	}
+}
+
+.members-game-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 5px 16px 16px;
+
+	@include breakpoint(min-phone) {
+		flex-direction: row;
+	}
+}
+
+.members-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(181px, 1fr));
 	grid-gap: 30px;
@@ -160,14 +213,14 @@
 	padding: 16px 16px 30px;
 }
 
-.member-home-title {
+.members-content-title {
 	color: #FD4184;
 	font-size: 16px;
 	font-weight: 700;
 	padding: 16px 0 0 16px;
 }
 
-.home-grid-game {
+.grid-game {
     align-items: flex-end;
 	background-size: cover;
 	display: flex;
@@ -179,7 +232,7 @@
     &:hover {
     	box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 
-    	.home-grid-game-title {
+    	.grid-game-title {
     		background-color: #FD4184;
 
     		&.blue {
@@ -189,7 +242,7 @@
     }
 }
 
-.home-grid-game-title {
+.grid-game-title {
 	background-color: rgba(253,65,132, .5);
 	color: #ffffff;
     font-size: 11px;
@@ -203,4 +256,121 @@
     &.blue {
 		background-color: rgba(53,21,92, .5);
     }
+}
+
+/*=== game page ===*/
+
+.members-game-item {
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+
+	&:first-of-type {
+		align-items: flex-end;
+		display: flex;
+		justify-content: flex-end;
+		padding-top: 50%;
+
+		@include breakpoint(min-phone) {
+			margin-right: 30px;
+			padding-top: 0;
+		}
+	}
+
+	@include breakpoint(min-laptop) {
+		max-width: 40%;
+	}
+}
+
+.game-btn {
+	@include gradient(rgb(255,159,140), rgb(253,70,132));
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	min-width: 160px;
+	padding: 16px;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	width: 100%;
+
+	@include breakpoint(min-phone) {
+		width: auto;
+	}
+}
+
+.members-game-title {
+	color: #FD4184;
+	font-size: 16px;
+	font-weight: 700;
+	padding: 8px 0 12px 0;
+
+	@include breakpoint(min-phone) {
+		padding: 0 0 12px 0;
+	}
+}
+
+.members-game-subtitle {
+	color: #23155C;
+	font-size: 12px;
+	font-weight: 500;
+	margin: 0 0 30px 0;
+}
+
+.textarea {
+	border: 0;
+	background-color: #ffffff;
+	border-radius: 6px;
+	font-size: 11px;
+	margin-bottom: 10px;
+	resize: none;
+	padding: 12px;
+	width: 100%;
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.comment-cta-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 20px;
+
+	@include breakpoint(min-phone) {
+		margin-bottom: 60px;
+	}
+}
+
+.comment-btn-reset,
+.comment-btn-submit {
+	border: 1px solid transparent;
+	border-radius: 6px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 9px;
+	font-weight: 700;
+	min-width: 120px;
+	padding: 14px 10px;
+	text-transform: uppercase;
+	width: 100%;
+
+	@include breakpoint(min-phone) {
+		width: auto;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.comment-btn-reset {
+	border-color: #23155C;
+	color: #23155C;
+	margin-right: 10px;
+}
+
+.comment-btn-submit {
+	@include gradient(rgb(255,159,140), rgb(253,70,132));
+	color: #ffffff;
 }
