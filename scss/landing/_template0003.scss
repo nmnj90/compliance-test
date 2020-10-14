@@ -1,15 +1,5 @@
 /**************************************** Landing0003 ****************************************/
 .landing0003 {
-    background-color: #000;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        font-family: 'Quicksand', sans-serif;
-    }
 
     h2 {
         font-size: 35px;
@@ -20,20 +10,6 @@
             font-size: 55px;
             margin-bottom: 35px;
         }
-    }
-
-    p {
-        line-height: 1.3;
-        font-size: 14px;
-        
-        @include breakpoint(min-tablet) {
-            font-size: 16px;
-        }
-    }
-
-    img {
-        max-width: 100%;
-        display: block;
     }
 
     .icon {
@@ -57,7 +33,8 @@
     }
 
     &.form-signup {
-        .hero {
+        .hero,
+        .hero-cta {
             display: none;
         }
 
@@ -67,7 +44,8 @@
     }
 
     &.form-signin {
-        .hero {
+        .hero,
+        .hero-cta {
             display: none;
         }
 
@@ -80,19 +58,11 @@
         }
     }
 
-    .container {
-        max-width: 1210px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
     header {
-        position: absolute;
-        width: 100%;
-        top: 35px;
+        padding-top: 15px;
 
-        @include breakpoint(min-laptop) {
-            top: 55px;
+        @include breakpoint(min-tablet) {
+            padding-top: 30px;
         }
     }
 
@@ -137,13 +107,6 @@
             display: block;
             margin-bottom: 0;
         }
-    }
-
-    .hero-wrapper,
-    .main-form-wrapper,
-    .signin-reset-wrapper {
-        padding-top: 109px;
-        border: 20px solid #FFAE00;
     }
 
     .hero-content {
@@ -435,94 +398,135 @@
             color: #FFAE00;
         }
     }
+}
 
-    footer {
-        padding: 20px 0;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
 
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+p {
+    line-height: 1.3;
+    font-size: 14px;
+
+    @include breakpoint(min-tablet) {
+        font-size: 16px;
+    }
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.main-wrapper {
+    border: 20px solid #FFAE00;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+footer {
+    padding: 20px 0;
+
+    @include breakpoint(min-tablet) {
+        padding: 60px 0 20px;
+    }
+}
+
+.footer-wrapper {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include breakpoint(min-tablet) {
+        display: flex;
+    }
+}
+
+.footer-wrapper-item {
+    &.left-item {
         @include breakpoint(min-tablet) {
-            padding: 60px 0 20px;
+            max-width: 33.3%;
+            width: 33.3%;
         }
     }
 
-    .footer-wrapper {
-        flex-wrap: wrap;
-        align-items: flex-start;
-        justify-content: space-between;
-
+    &.right-item {
         @include breakpoint(min-tablet) {
-            display: flex;
-        }
-    }
-
-    .footer-wrapper-item {
-        &.left-item {
-            @include breakpoint(min-tablet) {
-                max-width: 33.3%;
-                width: 33.3%;
-            }
-        }
-
-        &.right-item {
-            @include breakpoint(min-tablet) {
-                max-width: 66.6%;
-                width: 66.6%;
-            }
-        }
-        
-        &.full-item {
-            max-width: 100%;
-            width: 100%;
+            max-width: 66.6%;
+            width: 66.6%;
         }
     }
     
-    .footer-nav-link,
-    .company-info,
-    .copyright {
-        color: #fff;
+    &.full-item {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+.footer-nav-link,
+.company-info,
+.copyright {
+    color: #fff;
+}
+
+.footer-nav {
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include breakpoint(min-tablet) {
+        text-align: left;
+    }
+}
+
+.footer-nav-link {
+    font-size: 14px;
+    margin-right: 25px;
+    font-weight: 700;
+
+    &:hover {
+        color: #FFAE00;
     }
 
-    .footer-nav {
-        margin-bottom: 25px;
-        text-align: center;
-
-        @include breakpoint(min-tablet) {
-            text-align: left;
-        }
+    @include breakpoint(min-tablet) {
+        font-size: 16px;
     }
+}
 
-    .footer-nav-link {
-        font-size: 14px;
-        margin-right: 25px;
-        font-weight: 700;
+.company-info {
+    font-size: 11px;
+    display: block;
+    text-align: center;
 
-        &:hover {
-            color: #FFAE00;
-        }
-
-        @include breakpoint(min-tablet) {
-            font-size: 16px;
-        }
+    @include breakpoint(min-tablet) {
+        text-align: left;
     }
+}
 
-    .company-info {
-        font-size: 11px;
-        display: block;
-        text-align: center;
+.copyright {
+    display: block;
+    font-weight: 700;
+    font-size: 10px;
+    padding-top: 25px;
+    text-align: center;
 
-        @include breakpoint(min-tablet) {
-            text-align: left;
-        }
-    }
-
-    .copyright {
-        display: block;
-        font-weight: 700;
-        font-size: 10px;
-        padding-top: 25px;
-        text-align: center;
-
-        @include breakpoint(min-tablet) {
-            padding-top: 85px;
-        }
+    @include breakpoint(min-tablet) {
+        padding-top: 85px;
     }
 }
