@@ -601,3 +601,18 @@
 	@include gradient(rgb(255,159,140), rgb(253,70,132));
 	color: #ffffff;
 }
+
+.email-notification {
+	background-color: #23155C;
+	padding: 10px;
+}
+
+.email-notification-text,
+.email-notification-link {
+	font-size: 11px;
+	margin-right: 10px;
+}
+
+.email-notification-text {
+	color: #ffffff;
+}
