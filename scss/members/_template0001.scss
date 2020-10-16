@@ -439,11 +439,11 @@
 }
 
 .members-profile-wrapper,
-.members-general-wrapper {
+.members-general-wrapper,
+.members-password-wrapper {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
     padding: 30px 16px 100px;
 
     @media (min-width: 1000px) {
@@ -456,10 +456,11 @@
 	}
 }
 
-.memeber-profile-img-wrapper {
+.memeber-profile-img-wrapper,
+.member-password-img-wrapper {
 
 	@media (min-width: 1000px) {
-		margin-right: auto;
+		margin-right: 60px;
 	}
 }
 
@@ -484,8 +485,11 @@
 	width: 100%;
 
 	@media (min-width: 1000px) {
-		padding: 0 15px;
 		width: 25vw;
+
+		&:last-of-type {
+			margin-left: 30px;
+		}
 	}
 }
 
@@ -504,7 +508,7 @@
 	}
 
 	@media (min-width: 1000px) {
-		margin-right: auto;
+		margin-right: 60px;
 	}
 }
 
@@ -527,8 +531,6 @@
 
 	@media (min-width: 1000px) {
 		flex-direction: row;
-		margin-left: 30px;
-		justify-content: flex-end;
 	}
 }
 
@@ -558,7 +560,7 @@
 	border-radius: 6px;
 	color: #23155C;
 	margin-bottom: 10px;
-	padding: 17px 10px;
+	padding: 11px 10px;
 	width: 100%;
 
 	@include input-placeholder() {
@@ -602,9 +604,18 @@
 	color: #ffffff;
 }
 
+.member-email {
+	margin-bottom: 26px;
+}
+
 .email-notification {
 	background-color: #23155C;
-	padding: 10px;
+	border-radius: 6px;
+	padding: 10px 20px 20px 40px;
+}
+
+.email-notification-close {
+	margin-bottom: 10px;
 }
 
 .email-notification-text,
@@ -615,4 +626,36 @@
 
 .email-notification-text {
 	color: #ffffff;
+	margin-bottom: 20px;
+}
+
+.email-notification-link {
+	color: #FE998B;
+	font-weight: 700;
+}
+
+/*=== change password page ===*/
+
+.member-password-img-wrapper {
+	margin-bottom: 20px;
+
+	@media (min-width: 1000px) {
+		margin-bottom: 0;
+	}
+}
+
+.members-password-wrapper {
+
+	@media (min-width: 1000px) {
+		align-items: flex-start;
+		padding-bottom: 12px;
+	}
+}
+
+.member-password-form {
+	width: 100%;
+
+	@media (min-width: 1000px) {
+		max-width: 25vw;
+	}
 }
