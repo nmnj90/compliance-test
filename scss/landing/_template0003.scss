@@ -98,7 +98,7 @@
         justify-content: center;
         margin-bottom: 15px;
 
-        @include breakpoint(min-laptop) {
+        @include breakpoint(min-laptop-large) {
             display: block;
             margin-bottom: 0;
         }
@@ -124,8 +124,12 @@
 
     .hero-content-item-left {
         @include breakpoint(min-tablet) {
-            max-width: 475px;
+            max-width: 715px;
             width: 100%;
+        }
+
+        @include breakpoint(min-laptop) {
+            max-width: 475px;
         }
     }
 
@@ -269,10 +273,15 @@
 
     .form-holder  {
         padding: 0 20px 20px;
-        @include breakpoint(min-tablet) {
+
+         @include breakpoint(min-tablet) {
+            max-width: 715px;
             padding: 0 160px 0 30px;
-            max-width: 475px;
             margin: 0 0 0 auto;
+        }
+
+        @include breakpoint(min-laptop-large) {
+            max-width: 475px;
         }
     }
 

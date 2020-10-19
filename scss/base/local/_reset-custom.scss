@@ -37,7 +37,8 @@ input[type=email],
 input[type=number],
 input[type=password],
 input[type=submit],
-select {
+select,
+textarea {
     border: none;
     box-sizing: border-box;
     border-radius: 0;
@@ -52,4 +53,9 @@ ol {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+input[type=submit] {
+    border: none;
+    background-color: transparent;
 }
