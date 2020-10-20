@@ -128,7 +128,7 @@
             width: 100%;
         }
 
-        @include breakpoint(min-laptop) {
+        @include breakpoint(min-laptop-large) {
             max-width: 475px;
         }
     }
