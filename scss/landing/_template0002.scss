@@ -1,0 +1,50 @@
+/*==================================================
+  template0002
+===================================================*/
+
+
+/*=== Global ===*/
+
+$page_max_width: 1200px;
+$container-spacing: 15px;
+
+.hide-from-screen {
+    left: -10000px !important;
+    position: absolute !important;
+}
+
+.hidden,
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.site-footer {
+
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+.container {
+    max-width: $page_max_width + ($container_spacing * 2);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+// .site-header {
+
+//     .sign-up-link {
+//     display: none;
+
+//         .form-signin & {
+//             display: block;
+//         }
+//     }
+
+// }

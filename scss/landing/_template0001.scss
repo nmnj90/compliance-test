@@ -1,3 +1,388 @@
-p {
-    color: $txt-color;
+/*==================================================
+  template0001
+===================================================*/
+
+
+/*=== Global ===*/
+
+$page_max_width: 600px;
+$container-spacing: 15px;
+
+.hide-from-screen {
+    left: -10000px !important;
+    position: absolute !important;
+}
+
+.hidden,
+.hide {
+    display: none !important;visibility: hidden !important;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: $page_max_width + ($container_spacing * 2);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/*=== Header ===*/
+
+.site-header {
+    position: absolute;
+    padding-top: 10px;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+}
+
+.logo-header {
+    display: inline-block;
+}
+
+/*=== main ===*/
+
+.content {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: calc(100vh - 154px);
+    padding: 100px 0 50px;
+
+    .form-signin & {
+        padding-top: 173px;
+    }
+}
+
+/*=== intro ===*/
+
+.intro {
+
+    .form-signup &,
+    .form-signin & {
+        display: none;
+    }
+}
+
+.intro-title {
+    color: #ffffff;
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(120px, auto);
+    grid-gap: 20px;
+
+    @include breakpoint(min-phone) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @include breakpoint(min-phone) {
+        grid-row: span 1;
+    }
+}
+
+.landscape {
+    grid-column: span 2;
+
+    @include breakpoint(min-phone) {
+        grid-column: span 3;
+    }
+}
+
+.intro-cta {
+    background-color: #ffffff;
+    padding: 70px 30px 40px;
+}
+
+.intro-cta-text {
+    font-size: 20px;
+    line-height: normal;
+    margin: 0 0 50px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cta-wrapper {
+
+    @include breakpoint(min-phone) {
+        max-width: 240px;
+        margin: 0 auto;
+    }
+}
+
+.cta-button {
+    @include gradient(rgb(253,70,132),rgb(255,159,140));
+    border-radius: 6px;
+    border: 0;
+    color: #ffffff;
+    cursor: pointer;
+    display: block;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+
+    @include breakpoint(min-phone) {
+        max-width: 240px;
+    }
+}
+
+/*=== signup / signin ===*/
+
+.signup {
+    display: none;
+
+    .form-signup & {
+        display: block;
+    }
+}
+
+.signup-title {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.signup-form-wrapper,
+.signin-form-wrapper {
+    background-color: rgba(255,255,255, .65);
+    color: #363A5F;
+    padding: 26px;
+}
+
+.signup-form-title,
+.signup-form-subtitle,
+.signin-form-title,
+.signin-form-subtitle {
+    max-width: 360px;
+    margin: 0 auto;
+    line-height: normal;
+    text-align: center;
+}
+
+.signup-form-title,
+.signin-form-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.signup-form-subtitle,
+.signin-form-subtitle  {
+    color: #FD5084;
+    font-size: 14px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.signin {
+    display: none;
+
+    .form-signin & {
+        display: block;
+    }
+}
+
+.signin-wrapper,
+.forgot-password-wrapper {
+    position: relative;
+}
+
+.signin-form-nav,
+.reset-form-nav {
+    bottom: 70px;
+    display: flex;
+    font-size: 10px;
+    justify-content: space-between;
+    left: 50%;
+    margin: 0 auto;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
+
+    @include breakpoint(min-phone) {
+        max-width: 240px;
+    }
+}
+
+.essential-data {
+
+    .form-field-wrapper {
+
+        &:last-of-type {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.forgot-password-link,
+.sign-up-link,
+.go-back-link {
+    color: #363A5F;
+    display: inline-block;
+}
+
+/*=== form ===*/
+
+.form-field-wrapper {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+
+    @include breakpoint(min-phone) {
+        grid-template-columns: 1fr 240px 1fr;
+        grid-gap: 10px;
+        text-align: right;
+    }
+
+    &:not(:last-of-type) {
+        margin-bottom: 10px;
+    }
+
+    &.location {
+        margin-bottom: 20px;
+    }
+
+    .input,
+    .select {
+        border: 1px solid #A1A1B8;
+        border-radius: 6px;
+        font-size: 14px;
+        padding: 11px 20px;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .label {
+        font-size: 13px;
+        font-weight: 700;
+    }
+}
+
+/*=== footer ===*/
+
+.site-footer {
+    background-color: #23155C;
+    color: #ffffff;
+    font-size: 10px;
+    padding: 40px 15px 20px;
+
+    @include breakpoint(min-phone) {
+        padding: 70px 15px 40px;
+    }
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1032px;
+    margin: 0 auto;
+
+    @include breakpoint(min-phone) {
+        flex-direction: row;
+    }
+}
+
+.footer-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @include breakpoint(min-phone) {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    li {
+        font-size: 12px;
+        list-style: none;
+        padding: 0 0 10px 0;
+
+        &:not(:last-of-type) {
+
+            @include breakpoint(min-phone) {
+                padding: 0 30px 0 0;
+            }
+        }
+
+        &:nth-last-child(2) {
+            padding-bottom: 0;
+
+            .form-signin & {
+
+                @include breakpoint(min-phone) {
+                    padding-right: 0
+                }
+            }
+        }
+    }
+
+    a {
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    @include breakpoint(min-phone) {
+        flex-direction: row;
+    }
+}
+
+.sign-up-footer {
+    display: none;
+
+    .form-signin & {
+        display: block;
+    }
+}
+
+.copyright {
+    margin: 0;
+}
+
+.footer-company-text {
+    margin: 0;
+    text-align: center;
+
+    @include breakpoint(min-phone) {
+        text-align: right;
+    }
 }
