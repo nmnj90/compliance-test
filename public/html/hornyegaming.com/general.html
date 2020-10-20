@@ -64,8 +64,8 @@
             </div>
             <div class="main-content">
                 <div class="container">
-                    <div class="profile">
-                        <div class="profile-item item-icon">
+                    <div class="general">
+                        <div class="general-item item-icon">
                             <form method="post" accept-charset="UTF-8">
                                 <input type="file" id='file' class="hide">
                                 <label for="file" class='label'>
@@ -78,10 +78,11 @@
                                 </label>
                             </form>
                         </div>
-                        <div class="profile-item">
+                        <div class="general-item">
                             <form method="post" accept-charset="UTF-8">
                                 <div class="form-field-wrapper">
-                                    <textarea name="username" class="textarea" placeholder="Username"></textarea>
+                                    <label for="username" class="input-label">Username</label>
+                                    <input type="text" id="username" class="input" placeholder="Username">
                                 </div>
                                 <div class="cta-wrapper">
                                     <a href="javascript:;" class="btn btn-secondary">Cancel</a>
@@ -89,10 +90,23 @@
                                 </div>
                             </form>       
                         </div>
-                        <div class="profile-item">
+                        <div class="general-item">
                             <form method="post" accept-charset="UTF-8">
                                 <div class="form-field-wrapper">
-                                    <textarea name="comment" class="textarea" placeholder="Leave a comment"></textarea>
+                                    <label for="email" class="input-label">Email</label>
+                                    <input type="email" id="email" class="input" placeholder="Email">
+                                </div>
+                                <div class="cta-wrapper">
+                                    <a href="javascript:;" class="btn btn-secondary">Cancel</a>
+                                    <input type="submit" class="btn btn-primary" value="Save">
+                                </div>
+                            </form>     
+                        </div>
+                        <div class="general-item">
+                            <form method="post" accept-charset="UTF-8">
+                                <div class="form-field-wrapper">
+                                    <label for="password" class="input-label">Password</label>
+                                    <input type="password" id="password" class="input" placeholder="Password">
                                 </div>
                                 <div class="cta-wrapper">
                                     <a href="javascript:;" class="btn btn-secondary">Cancel</a>

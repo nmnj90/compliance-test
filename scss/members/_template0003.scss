@@ -270,18 +270,29 @@
         margin-bottom: 15px;
     }
 
+    .input-label {
+        display: block;
+        font-size: 12px;
+        padding: 0 0 15px 15px;
+    }
+
+    .input,
     .textarea {
         border: 6px solid #FFAE00;
-        padding: 20px;
+        padding: 15px;
         color: #fff;
         font-size: 12px;
         width: 100%;
         background-color: #000;
-        height: 100px;
 
         @include input-placeholder {
             color: #fff;
         }
+    }
+
+    .textarea {
+        height: 100px;
+        padding: 20px;
     }
 
     .btn {
@@ -335,7 +346,8 @@
         color: #FFAE00;
     }
 
-    .profile {
+    .profile,
+    .general {
         @include breakpoint(min-tablet) {
             display: flex;
             flex-wrap: wrap;
@@ -347,18 +359,12 @@
         margin-bottom: 15px;
 
         @include breakpoint(min-tablet) {
-            max-width: 37.5%;
-            width: 37.5%;
+            max-width: 33.3%;
+            width: 33.3%;
             padding: 0 15px;
             margin-bottom: 30px;
         }
 
-        &.item-icon {
-            @include breakpoint(min-tablet) {
-                max-width: 12.5%;
-                width: 12.5%;
-            }
-        }
         .cta-wrapper {
             display: flex;
             
@@ -366,6 +372,32 @@
                 width: 50%;
                 max-width: 50%;
             }
+        }
+
+    }
+    .general-item {
+        margin-bottom: 15px;
+
+        @include breakpoint(min-tablet) {
+            max-width: 25%;
+            width: 25%;
+            padding: 0 15px;
+            margin-bottom: 30px;
+        }
+
+        .cta-wrapper {
+            display: flex;
+            
+            .btn {
+                width: 50%;
+                max-width: 50%;
+            }
+        }
+    }
+    .item-icon {
+        @include breakpoint(min-tablet) {
+            max-width: 25%;
+            width: 25%;
         }
     }
 }
