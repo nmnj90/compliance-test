@@ -14,54 +14,60 @@
 
 </head>
 
-<body class="landing0005">
-    <div class="main-wrapper">
-        <header>
-            <div class="container">
-                <span class="burger-item mobile"></span>
-                <div class="header-nav">
-                    <a href="javascript:;" class="logo">
-                        <img src="../../img/egamesexplosion.com/logo.png" alt="">
-                    </a>
-                    <div class="nav">
-                        
-                    </div>
+<body class="landing0005" style="background-image:url('../../img/egamesexplosion.com/bg.jpg')">
+    <header class="header">
+        <div class="container">
+            <span class="burger-item mobile"></span>
+            <div class="header-nav">
+                <a href="javascript:;" class="logo">
+                    <img src="../../img/egamesexplosion.com/logo.png" alt="">
+                </a>
+                <div class="nav">
+                    <p class="nav-description">The best erotic games that will blow your mind!</p>
+                    <a href="javascript:;" id="js-signin" class="login-btn js-nav-menu js-link js-signin-action js-form-action " data-link-target="#js-signin-wrapper" data-body-class="form-signin">Login</a>
                 </div>
             </div>
-        </header>
-        <main>
-            <div class="main-form-wrapper">
+        </div>
+    </header>
+   
+    <div class="container">
+        <main class="main">
+            <div class="main-form-wrapper" style="background-image:url('../../img/egamesexplosion.com/main-image.jpg')">
                 <div id="js-signup-wrapper" class="signup-wrapper js-linked">
-                    <form id="js-signup-form" data-form-type="single-step" action="javascript:void(0)" method="POST">
-                        <div class="form-holder" id="js-form-wrapper">
-                            <div class="form-fields">
-                                <div class="form-field-wrapper username">
-                                    <label for="username" class="label">Username</label>
-                                    <div class="input-wrap">
-                                        <input id="username" class="input" type="text" name="username">
+                    <div class="sign-up-form form-holder">
+                        <h2 class="form-title">Create account</h2>
+                        <form id="js-signup-form" data-form-type="single-step" action="javascript:void(0)" method="POST">
+                            <div class="form-wrapper" id="js-form-wrapper">
+                                <div class="form-fields">
+                                    <div class="form-field-wrapper username">
+                                        <label for="username" class="label">Username</label>
+                                        <div class="input-wrap">
+                                            <input id="username" class="input" type="text" name="username">
+                                        </div>
+                                    </div>
+                                    <div class="form-field-wrapper email">
+                                        <label for="email" class="label">Email adress</label>
+                                        <div class="input-wrap">
+                                            <input id="email" type="text" name="email" class="input">
+                                        </div>
+                                    </div>
+                                    <div class="form-field-wrapper password">
+                                        <label for="password" class="label">Password</label>
+                                        <div class="input-wrap">
+                                            <input id="password" type="password" name="password" class="input">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="form-field-wrapper email">
-                                    <label for="email" class="label">Email adress</label>
-                                    <div class="input-wrap">
-                                        <input id="email" type="text" name="email" class="input">
-                                    </div>
-                                </div>
-                                <div class="form-field-wrapper password">
-                                    <label for="password" class="label">Password</label>
-                                    <div class="input-wrap">
-                                        <input id="password" type="password" name="password" class="input">
-                                    </div>
+                                <div class="cta-wrapper">
+                                    <input class="button-submit t-button-start-reg js-registration-submit" type="submit" value="Start">
                                 </div>
                             </div>
-                            <div class="cta-wrapper">
-                                <input class="button-submit t-button-start-reg js-registration-submit" type="submit" value="Next">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>    
                 </div>
-                <div id="js-signin-wrapper" class="js-form-changer-wrapper js-linked form-wrapper signin-wrapper hide-from-screen ">
+                <div id="js-signin-wrapper" class="js-form-changer-wrapper js-linked signin-wrapper hide-from-screen ">
                     <div class="sign-in-form form-holder">
+                        <h2 class="form-title">Sign in</h2>
                         <form id="js-signin-form" method="POST" action="javascript:void(0)">
                             <div class="essential-data">
                                 <div class="username form-field-wrapper">
@@ -85,7 +91,6 @@
                                 <a class="js-forgot-password-action form-link forgot-password-link t-forgot-password-link"
                                     href="javascript:void(0);">Forgot password?</a>
                                 <div class="not-member-container">
-                                    <span class="not-member-text">Not a member?</span>
                                     <a class="js-signup-action js-link form-link sign-up-link t-sign-up-link" href="javascript:void(0);"
                                         data-link-target="#js-signup-wrapper" data-body-class="form-signup">Sign up</a>
                                 </div>
@@ -98,8 +103,9 @@
                     </div>
                 </div>
                 <div id="js-forgot-password-wrapper"
-                    class="js-form-changer-wrapper form-wrapper forgot-password-wrapper hide-from-screen">
+                    class="js-form-changer-wrapper forgot-password-wrapper hide-from-screen">
                     <div class="reset-form form-holder">
+                        <h2 class="form-title">Reset password</h2>
                         <form id="js-forgot-password-form" action="" method="POST">
                             <div class="essential-data">
                                 <div class="email form-field-wrapper">
@@ -123,7 +129,6 @@
                                 <a class="js-signin-action form-link go-back-link t-signin-go-back-link" href="javascript:void(0);">Go
                                     back</a>
                                 <div class="not-member-container">
-                                    <span class="not-member-text">Not a member?</span>
                                     <a class="js-signup-action js-link form-link sign-up-link t-signin-signup-link" href="javascript:void(0);"
                                         data-link-target="#js-signup-wrapper" data-body-class="form-signup">Sign
                                         up</a>
@@ -139,13 +144,15 @@
             </div>
         </main>
     </div>
-    <footer>
+
+    <footer class="footer">
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-wrapper-item left-item">
-                    <a href="javascript:;" class="logo">
-                        <img src="../../img/egamesexplosion.com/logo.png" alt="">
-                    </a>
+                    <p class="company-info">SITENAME.com Copyright © 2020</p>
+                    <p class="company-info">CORP NAME, CORP ADDRESS. Company #: VAT #: </p>
+                    <p class="company-info">All rights reserved.</p>
+                    <p class="company-info">All models were at least 18 years old when they were photographed.</p> 
                 </div>
                 <div class="footer-wrapper-item right-item">
                     <div class="footer-nav">
@@ -153,14 +160,8 @@
                         <a href="javascript:;" class="footer-nav-link">Provacy Policy</a>
                         <a href="javascript:;" class="footer-nav-link">Support</a>
                         <a href="javascript:;" class="footer-nav-link">Contact</a>
-                        <a href="javascript:;" id="js-signin" class="footer-nav-link js-nav-menu js-link js-signin-action js-form-action " data-link-target="#js-signin-wrapper" data-body-class="form-signin">Login</a>
                     </div>
-                    <span class="company-info">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement CORP NAME, CORP ADDRESS. Company #: VAT #: All rights
-                    reserved.
-                    All models were at least 18 years old when they were photographed.</span>
-                </div>
-                <div class="footer-wrapper-item full-item">
-                    <span class="copyright">HorneyGaming.com Copyright © 2020</span>
+                    <p class="company-info">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</p> 
                 </div>
             </div>
         </div>

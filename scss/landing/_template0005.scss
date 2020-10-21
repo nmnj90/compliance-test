@@ -1,5 +1,239 @@
 /**************************************** Landing0005 ****************************************/
 .landing0005 {
+    background-size: cover;
+    background-position: center;
 
+    .container {
+        max-width: 1345px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    .header {
+        padding: 20px 0;
+
+        @include breakpoint(min-tablet) {
+            padding: 40px 15px;
+        }
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .header-nav {
+        @include breakpoint(min-tablet) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .nav {
+        text-align: center;
+
+        @include breakpoint(min-tablet) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .nav-description {
+        font-size: 16px;
+        margin: 0 0 5px 0;
+
+        @include breakpoint(min-tablet) {
+            font-size: 24px;
+            margin: 0 30px 0 0;
+        } 
+    }
+
+    .login-btn {
+        border-radius: 10px;
+        border: 2px solid #de007e;
+        background-color: #de007e;
+        font-size: 14px;
+        padding: 10px 20px;
+        display: inline-block;
+
+        &:hover {
+            background-color: #fff;
+            color: #de007e;
+        }
+    }
+
+    main {
+        @include gradient(#dd007e, #640239);
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        -webkit-box-shadow: 0px 0px 35px 20px rgba(221,0,125,0.3);
+        -moz-box-shadow: 0px 0px 35px 20px rgba(221,0,125,0.3);
+        box-shadow: 0px 0px 35px 20px rgba(221,0,125,0.3);
+    }
+
+    .main-form-wrapper {
+        background-size: 0;
+
+        @include breakpoint(min-tablet) {
+            flex-grow: 1;
+            min-height: 720px;
+            background-size: cover;
+            -webkit-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+            -moz-box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+        }
+    }
+
+    .form-holder {
+        @include breakpoint(min-tablet) {
+            max-width: 340px;
+            width: 100%;
+            margin: 0 0 0 auto;
+            padding: 50px 50px 0 0;
+        }
+    }
     
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        
+        @include breakpoint(min-tablet) {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .form-field-wrapper {
+        margin-bottom: 10px;
+    }
+
+    .label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .input {
+        border-radius: 10px;
+        background-color: #fff;
+        color: #000;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+        padding: 9px;
+    }
+
+    .cta-wrapper {
+        padding-top: 15px;
+    }
+
+    .button-submit,
+    .button-signup {
+        background-color: #00aeff;
+        border: 2px solid #00aeff;
+        border-radius: 10px;
+        color: #fff;
+        display: block;
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 15px;
+        width: 100%;
+        transition: all .2s ease;
+
+        &:hover {
+            background-color: #fff;
+            color: #00aeff;
+        }
+    }
+
+    .signin-form-nav,
+    .reset-form-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .form-link {
+        font-size: 10px;
+
+        &:hover {
+            color: #00aeff;
+        }
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+a {
+    color: #fff;
+}
+
+.footer {
+    padding: 25px 0;
+
+    @include breakpoint(min-tablet) {
+        padding: 50px 0;
+    }
+}
+
+.footer-wrapper {
+    @include breakpoint(min-tablet) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.footer-wrapper-item {
+    text-align: center;
+
+    @include breakpoint(min-tablet) {
+        &.left-item {
+            text-align: left;
+        }
+
+        &.right-item {
+            text-align: right;
+        }
+    }
+}
+
+.company-info {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
+.footer-nav {
+    margin: 15px 0;
+
+    @include breakpoint(min-tablet) {
+        margin: 0 0 15px;
+    }
+}
+
+.footer-nav-link {
+    font-size: 14px;
+    margin-right: 10px;
+
+    &:hover {
+        color: #de007e;
+    }
 }
