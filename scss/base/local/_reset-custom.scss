@@ -1,0 +1,61 @@
+/**************************************** Reset custom ****************************************/
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+p {
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+}
+
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+.hide-from-screen {
+    position: absolute;
+    left: -10000px !important;
+    top: 0 !important;
+}
+
+.icon {
+    fill: currentColor;
+    transition: all .2s ease;
+}
+
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=password],
+input[type=submit],
+select,
+textarea {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0;
+
+    &:focus {
+        outline: none;;
+    }
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+input[type=submit] {
+    border: none;
+    background-color: transparent;
+}
