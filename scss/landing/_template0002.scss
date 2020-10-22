@@ -39,9 +39,11 @@ h2, p {
     max-width: $page_max_width + ($container_spacing * 2);
     margin: 0 auto;
     padding: 0 15px;
+    width: 100%;
 }
 
-.btn {
+.btn,
+input[type="submit"] {
     border: 1px solid #6bce18;
     background-color: #78ff00;
     border-radius: 10px;
@@ -68,7 +70,8 @@ h2, p {
     padding: 6px 15px;
 }
 
-.btn-big {
+.btn-big,
+input[type="submit"] {
     font-size: 24px;
     font-weight: 700;
     padding: 14px 40px;
@@ -208,7 +211,7 @@ h2, p {
     width: 100%;
 }
 
-.input {
+#{$form-input-text} {
     border-radius: 10px;
     background-color: #000000;
     border: 1px solid #78ff00;
