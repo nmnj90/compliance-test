@@ -8,11 +8,18 @@
         height: 46px;
         color: #19191b;
     }
+
+    .icon-search {
+        height: 18px;
+        width: 18px;
+        color: #7c7c7c;
+    }
     
-    > .container {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+    .container {
+        max-width: 1240px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
     }
 
     .main-wrapper {
@@ -91,7 +98,92 @@
         flex-grow: 1;
         max-width: calc(100% - 320px);
         width: calc(100% - 320px);
+        padding-left: 30px;
     }
+
+    .form-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0;
+
+        .form-wrapper {
+            max-width: 270px;
+            width: 270px;
+        }
+    
+        .form-field-wrapper {
+            position: relative;
+    
+            .icon {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    
+        .input {
+            border-radius: 10px;
+            background-color: #232428;
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            width: 100%;
+            padding: 15px 10px 15px 35px;
+
+             @include input-placeholder {
+                color: #fff;
+            }
+        }
+    }
+
+    .form-title {
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .games {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .featured-games {
+        padding-bottom: 30px;
+    }
+
+    .game-item {
+        max-width: 33.3%;
+        width: 33.3%;
+        padding: 0 10px;
+        margin: 0 0 20px;
+    }
+
+    .game-wrapper {
+        position: relative;
+    }
+
+    .game-image {
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 100%;
+        background-size: cover;
+    }
+    
+    .game-description {
+        border-radius: 50px;
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 13px 20px;
+        @include gradient(#dc007e, #640239);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+    }
+
 
     .footer {
         padding: 0;
@@ -103,8 +195,8 @@
     }
 
     .footer-wrapper-item {
-        padding: 20px 0 0;
-        
+        padding: 20px 20px 10px;
+
         &.left-item {
             background-color: #19191b;
             max-width: 320px;
