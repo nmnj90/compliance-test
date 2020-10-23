@@ -1,5 +1,120 @@
 /**************************************** Members0005 ****************************************/
 
 .members0005 {
-    background-color: #000;    
+    background-color: #000;
+
+    .icon-user {
+        width: 46px;
+        height: 46px;
+        color: #19191b;
+    }
+    
+    > .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .header {
+        max-width: 320px;
+        width: 320px;
+        flex-grow: 1;
+        background-color: #19191b;
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .user-wrapper {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .user-name {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .icon-wrapper {
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        background-color: #232428;
+    }
+
+    .header-nav-item {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 25px 0px;
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            transition: all .2s ease;
+            top: 0;
+            width: 0;
+            z-index: -1;
+            @include gradient(#dc007e, #640239);
+        }
+
+        &:hover,
+        &.is-active {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    .main {
+        flex-grow: 1;
+        max-width: calc(100% - 320px);
+        width: calc(100% - 320px);
+    }
+
+    .footer {
+        padding: 0;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-wrapper-item {
+        padding: 20px 0 0;
+        
+        &.left-item {
+            background-color: #19191b;
+            max-width: 320px;
+            width: 320px;
+        }
+
+        &.right-item {
+            max-width: calc(100% - 320px);
+            width: calc(100% - 320px);
+        }
+    }
+
 }
