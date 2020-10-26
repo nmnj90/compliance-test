@@ -1,5 +1,212 @@
 /**************************************** Members0005 ****************************************/
 
 .members0005 {
-    background-color: #000;    
+    background-color: #000;
+
+    .icon-user {
+        width: 46px;
+        height: 46px;
+        color: #19191b;
+    }
+
+    .icon-search {
+        height: 18px;
+        width: 18px;
+        color: #7c7c7c;
+    }
+    
+    .container {
+        max-width: 1240px;
+        width: 100%;
+        padding: 0 20px;
+        margin: 0 auto;
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+
+    .header {
+        max-width: 320px;
+        width: 320px;
+        flex-grow: 1;
+        background-color: #19191b;
+    }
+
+    .logo {
+        display: block;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .user-wrapper {
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .user-name {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .icon-wrapper {
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 80px;
+        background-color: #232428;
+    }
+
+    .header-nav-item {
+        display: block;
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 25px 0px;
+        position: relative;
+        z-index: 0;
+
+        &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            transition: all .2s ease;
+            top: 0;
+            width: 0;
+            z-index: -1;
+            @include gradient(#dc007e, #640239);
+        }
+
+        &:hover,
+        &.is-active {
+            &:before {
+                width: 100%;
+            }
+        }
+    }
+
+    .main {
+        flex-grow: 1;
+        max-width: calc(100% - 320px);
+        width: calc(100% - 320px);
+        padding-left: 30px;
+    }
+
+    .form-search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 0;
+
+        .form-wrapper {
+            max-width: 270px;
+            width: 270px;
+        }
+    
+        .form-field-wrapper {
+            position: relative;
+    
+            .icon {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    
+        .input {
+            border-radius: 10px;
+            background-color: #232428;
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            width: 100%;
+            padding: 15px 10px 15px 35px;
+
+             @include input-placeholder {
+                color: #fff;
+            }
+        }
+    }
+
+    .form-title {
+        font-size: 28px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .games {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .featured-games {
+        padding-bottom: 30px;
+    }
+
+    .game-item {
+        max-width: 33.3%;
+        width: 33.3%;
+        padding: 0 10px;
+        margin: 0 0 20px;
+    }
+
+    .game-wrapper {
+        position: relative;
+    }
+
+    .game-image {
+        border-radius: 10px;
+        overflow: hidden;
+        padding-bottom: 100%;
+        background-size: cover;
+    }
+    
+    .game-description {
+        border-radius: 50px;
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 16px;
+        padding: 13px 20px;
+        @include gradient(#dc007e, #640239);
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+    }
+
+
+    .footer {
+        padding: 0;
+    }
+
+    .footer-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-wrapper-item {
+        padding: 20px 20px 10px;
+
+        &.left-item {
+            background-color: #19191b;
+            max-width: 320px;
+            width: 320px;
+        }
+
+        &.right-item {
+            max-width: calc(100% - 320px);
+            width: calc(100% - 320px);
+        }
+    }
+
 }
