@@ -45,7 +45,16 @@
         <main class="main">
             <div class="container">
                 <div class="form-search">
-                    <h2 class="form-title">Games</h2>
+                    <div class="form-search-item">
+                        <div class="back-wrapper">
+                            <a href="members.html" class="back-link">
+                                <svg class="icon icon-back">
+                                    <use xlink:href="../../img/egamesexplosion.com/icons.svg#back"></use>
+                                </svg>
+                            </a>
+                            <h2 class="title">Game name</h2>
+                        </div>
+                    </div>
                     <form method="post" accept-charset="UTF-8">
                         <div class="form-wrapper">
                             <div class="form-field-wrapper">
@@ -59,6 +68,27 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <div class="game-inner">
+                    <div class="game-inner-item item-left">
+                        <div class="game-inner-image" style="background-image: url('../../img/egamesexplosion.com/game-inner.png')"></div>
+                    </div>
+                    <div class="game-inner-item item-right">
+                        <a href="" class="game-inner-link">Play <br/> game</a>
+                    </div>
+                    <div class="game-inner-item item-full">
+                        <div class="form-wrapper">
+                            <form method="post">
+                                <div class="form-field-wrapper">
+                                    <textarea name="comment" class="textarea" placeholder="Leave a comment"></textarea>
+                                </div>
+                                <div class="form-cta-wrapper">
+                                    <a href="javascript:;" class="btn btn-secondary">Cancel</a>
+                                    <input type="submit" value="Send" class="btn btn-primary">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

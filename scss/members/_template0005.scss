@@ -4,15 +4,21 @@
     background-color: #000;
 
     .icon-user {
+        color: #19191b;
         width: 46px;
         height: 46px;
-        color: #19191b;
     }
 
     .icon-search {
+        color: #7c7c7c;
         height: 18px;
         width: 18px;
-        color: #7c7c7c;
+    }
+
+    .icon-back {
+        color: #fff;
+        height: 16px;
+        width: 18px;
     }
     
     .container {
@@ -122,23 +128,95 @@
                 transform: translateY(-50%);
             }
         }
-    
-        .input {
-            border-radius: 10px;
-            background-color: #232428;
-            color: #fff;
-            display: block;
-            font-size: 14px;
-            width: 100%;
-            padding: 15px 10px 15px 35px;
+    }
 
-             @include input-placeholder {
-                color: #fff;
-            }
+    .input,
+    .textarea {
+        border: 2px solid transparent;
+        border-radius: 10px;
+        background-color: #232428;
+        color: #fff;
+        display: block;
+        font-size: 14px;
+        width: 100%;
+        transition: all .2s ease;
+
+            @include input-placeholder {
+            color: #fff;
+        }
+
+        &:hover {
+            border-color: #dc007e;
         }
     }
 
-    .form-title {
+    .input {
+        padding: 15px 10px 15px 35px;
+    }
+
+    .textarea {
+        height: 120px;
+        padding: 30px;
+    }
+
+    .form-field-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .form-cta-wrapper {
+        text-align: right;
+    }
+
+    .btn {
+        display: inline-block;
+        border-radius: 50px;
+        font-size: 16px;
+        color: #fff;
+        padding: 12px;
+        min-width: 120px;
+        text-align: center;
+        transition: all .2s ease;
+    }
+
+    .btn-primary {
+        @include gradient(#dc007e, #640239);
+    }
+
+    .btn-secondary {
+        border: 2px solid transparent;
+        background-color: #19191b;
+        margin-right: 15px;
+        
+        &:hover {
+            border-color: #dc007e;
+        }
+    }
+
+    .back-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .back-link {
+        align-items: center;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        margin-right: 10px;
+        height: 40px;
+        width: 40px;
+        @include gradient(#dc007e, #640239);
+
+        .icon {
+            transform: translateX(-2px);
+        }
+
+        &:hover {
+            @include gradient(#640239, #dc007e);
+        }
+    }
+
+    .title {
         font-size: 28px;
         text-transform: uppercase;
         font-weight: 500;
@@ -184,6 +262,52 @@
         transform: translate(-50%, 50%);
     }
 
+    .game-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    .game-inner-item {
+        padding: 0 10px;
+        margin-bottom: 30px;
+
+        &.item-left {
+            max-width: 66.6%;
+            width: 66.6%;
+        }
+
+        &.item-right {
+            max-width: 33.3%;
+            width: 33.3%;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        &.item-full {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    .game-inner-image {
+        border-radius: 10px;
+        background-size: cover;
+        padding-bottom: 68.5%;
+    }
+
+    .game-inner-link {
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-align: center;
+        @include gradient(#dc007e, #640239);
+    }
 
     .footer {
         padding: 0;
