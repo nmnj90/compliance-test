@@ -2,7 +2,6 @@
   template0002
 ===================================================*/
 
-
 /*=== Global ===*/
 
 $page_max_width: 1200px;
@@ -20,12 +19,7 @@ $container-spacing: 15px;
 }
 
 * {
-    box-sizing: border-box;
     font-family: 'Exo 2', sans-serif;
-}
-
-h2, p {
-    margin: 0;
 }
 
 .site-footer {
@@ -109,7 +103,6 @@ input[type="submit"] {
             display: none;
         }
     }
-
 }
 
 .site-header-wrapper {
@@ -135,6 +128,8 @@ input[type="submit"] {
 /*=== Content ===*/
 
 .content {
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -258,6 +253,13 @@ input[type="submit"] {
 
     @include breakpoint(min-phone) {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+.forgot-password-wrapper {
+
+    .essential-data {
+        grid-template-columns: 1fr;
     }
 }
 
