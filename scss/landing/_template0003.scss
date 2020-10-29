@@ -127,10 +127,6 @@
             max-width: 715px;
             width: 100%;
         }
-
-        @include breakpoint(min-laptop-large) {
-            max-width: 475px;
-        }
     }
 
     .hero-text,
@@ -278,10 +274,6 @@
             max-width: 715px;
             padding: 0 160px 0 30px;
             margin: 0 0 0 auto;
-        }
-
-        @include breakpoint(min-laptop-large) {
-            max-width: 475px;
         }
     }
 
