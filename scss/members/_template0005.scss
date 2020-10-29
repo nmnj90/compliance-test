@@ -395,6 +395,16 @@
         }
     }
 
+    .password {
+        .form-wrapper {
+            max-width: 40%;
+        }
+        .input {
+            max-width: calc(100% - 135px);
+            margin-right: 15px;
+        }
+    }
+
     .footer {
         padding: 0;
     }
