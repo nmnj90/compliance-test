@@ -320,7 +320,15 @@
         @include gradient(#dc007e, #640239);
     }
 
-    .settings {
+    .profile {
+        .form-wrapper {
+            max-width: 70%;
+            width: 70%;
+        }
+    }
+
+    .settings,
+    .profile {
         .user-wrapper {
             background-color: #19191b;
             border-radius: 10px;
@@ -336,13 +344,15 @@
         }
     }
 
-    .settings-wrapper {
+    .settings-wrapper,
+    .profile-wrapper {
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 70px;
     }
 
-    .settings-item {
+    .settings-item,
+    .profile-item {
         &.item-left {
             max-width: 270px;
             width: 270px;
