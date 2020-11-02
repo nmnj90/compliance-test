@@ -1,4 +1,234 @@
 /**************************************** Landing0006 ****************************************/
+
+body {
+    font-family: 'Exo 2', sans-serif;
+    background-color: #000;
+    font-style: italic;
+}
+
+.footer {
+    font-size: 12px;
+    padding: 15px 0;
+    color: #fff;
+
+    @include breakpoint(min-tablet) {
+        padding: 30px 0;
+    }
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @include breakpoint(min-tablet) {
+        flex-direction: row;
+    }
+}
+
+.footer-wrapper-item {
+    &.right-item {
+        order: -1;
+
+        @include breakpoint(min-tablet) {
+            order: 2
+        }
+    }
+}
+
+.footer-nav {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.footer-nav-link {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #fff;
+
+    &:hover {
+        color: #6dc310;
+    }
+}
+
+.company-info {
+    font-size: 12px;
+    margin-bottom: 2px;
+}
+
 .landing0006 {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
     
+
+    .container {
+        max-width: 1270px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .header {
+        padding: 35px 0;
+
+        @include breakpoint(min-tablet) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+    }
+    
+    .header-wrapper {
+        text-align: right;
+    }
+
+    .main {
+        background-size: 0;
+
+        @include breakpoint(min-tablet) {
+            background-size: cover;
+            flex-grow: 1;
+            padding-top: 195px;
+        }
+    }
+    
+    .main-wrapper {
+        @include breakpoint(min-tablet) {
+            max-width: 760px;
+            margin: 0 0 0 auto;
+            width: 100%;
+            text-align: right;
+        }
+    }
+
+    .main-form-wrapper {
+        border-radius: 30px;
+        background-color: #fff;
+        overflow: hidden;
+        text-transform: uppercase;
+
+        @include breakpoint(min-tablet) {
+            max-width: 370px;
+            margin: 0 0 0 auto;
+        }
+    }
+
+    .sign-in-form,
+    .reset-form {
+        .cta-wrapper {
+            padding: 5px 20px 30px;
+        }
+    }
+
+    .signin-form-nav,
+    .reset-form-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        margin-bottom: 10px;
+    }
+
+    .form-link {
+        font-size: 12px;
+        color: #404040;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .form-wrapper {
+        padding: 20px 30px 30px;
+    }
+
+    .essential-data {
+        padding: 20px 30px 10px;
+    }
+
+    .cta-wrapper {
+        text-align: center;
+        padding: 5px 0 0;
+    }
+
+    .form-title {
+        background-color: #db0f0f;
+        color: #fff;
+        font-size: 24px;
+        padding: 20px 10px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .form-field-wrapper {
+        margin-bottom: 15px;
+    }
+
+    .label {
+        color: #404040;
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 7px;
+        text-align: center;
+    }
+
+    .input {
+        border-radius: 10px;
+        background-color: #ebebeb;
+        color: #000;
+        font-size: 16px;
+        padding: 8px;
+        width: 100%;
+    }
+
+    .button-submit,
+    .button-signup {
+        background-color: #6dc310;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        padding: 15px 10px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    .main-text {
+        padding: 30px 0;
+
+        h2 {
+            color: #fff;
+            font-size: 24px;
+            font-weight: 500;
+        }
+    }
+
+    .main-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px 30px;
+    }
+
+    .main-images-item {
+        max-width: 50%;
+        width: 50%;
+        padding: 0 4px;
+
+        @include breakpoint(min-tablet) {
+            max-width: 25%;
+            width: 25%;
+        }
+    }
+
+    .main-images-content {
+        border: 6px solid #1b1f25;
+        background-size: cover;
+        padding-bottom: 100%;
+        box-shadow: 0 0 12.5px #000000;
+    }
 }
