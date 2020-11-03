@@ -10,16 +10,83 @@
     <meta name="author" content="SitePoint">
     <link rel="stylesheet" href="../../css/sites/gamesexciteme.com/style.css?v=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body class="members0006">
     <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <a href="members.html" class="logo">
+                    <img src="../../img/gamesexciteme.com/logo.png" alt="">
+                </a>
+                <div class="nav-list">
+                    <a href="members.html" class="nav-list-item is-active">
+                        <img src="../../img/gamesexciteme.com/games.png" alt="">
+                    </a>
+                    <a href="profile.html" class="nav-list-item">
+                        <img src="../../img/gamesexciteme.com/profile.png" alt="">
+                    </a>
+                    <a href="general.html" class="nav-list-item">
+                        <img src="../../img/gamesexciteme.com/settings.png" alt="">
+                    </a>
+                    <a href="change-password.html" class="nav-list-item">
+                        <img src="../../img/gamesexciteme.com/password.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="main">
+        <div class="container container-narrow">
+            <div class="search-wrapper search-wrapper-flex">
+                <a href="members.html" class="btn btn-primary">Back</a>
+                <form action="GET" method="POST">
+                    <div class="form-field-wrapper">
+                        <input type="text" id="search" class="input" placeholder="SEARCH GAMES">
+                        <button type="submit" class="search-button">
+                            <svg class="icon icon-search">
+                                <use xlink:href="../../img/gamesexciteme.com/icons.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="main-wrapper">
+                <div class="game-innner-wrapper">
+                    <h3 class="game-inner-title">Game name</h3>
+                    <div class="game-inner-image"
+                        style="background-image: url('../../img/gamesexciteme.com/game-inner.jpg');"></div>
+                    <div class="cta-wrapper">
+                        <a href="javascript:;" class="btn">Play the game</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                <div class="footer-wrapper-item left-item">
+                    <p class="company-info">SITENAME.com Copyright © 2020</p>
+                    <p class="company-info">CORP NAME, CORP ADDRESS. Company #: VAT #: </p>
+                    <p class="company-info">All rights reserved.</p>
+                    <p class="company-info">All models were at least 18 years old when they were photographed.</p>
+                </div>
+                <div class="footer-wrapper-item right-item">
+                    <div class="footer-nav">
+                        <a href="javascript:;" class="footer-nav-link">Terms of services</a>
+                        <a href="javascript:;" class="footer-nav-link">Privacy Policy</a>
+                        <a href="javascript:;" class="footer-nav-link">Support</a>
+                        <a href="javascript:;" class="footer-nav-link">Contact</a>
+                    </div>
+                    <p class="company-info">18 U.S.C. 2257 Record-Keeping Requirements Compliance Statement</p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="../../js/app.js"></script>

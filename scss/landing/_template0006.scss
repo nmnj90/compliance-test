@@ -39,6 +39,7 @@ body {
 .footer-wrapper-item {
     &.right-item {
         order: -1;
+        text-align: right;
 
         @include breakpoint(min-tablet) {
             order: 2
@@ -47,7 +48,6 @@ body {
 }
 
 .footer-nav {
-    text-align: right;
     margin-bottom: 10px;
 }
 

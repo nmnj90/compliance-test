@@ -10,6 +10,10 @@ body {
         width: 100%;
         margin: 0 auto;
         padding: 0 20px;
+
+        &.container-narrow {
+            max-width: 480px;
+        }
     }
 
     .icon-search {
@@ -51,7 +55,8 @@ body {
         border-radius: 20px;
         margin-left: 10px;
 
-        &:hover {
+        &:hover,
+        &.is-active {
             background-color: #2c2c2c;
         }
     }
@@ -63,11 +68,25 @@ body {
     .search-wrapper {
         margin-bottom: 35px;
 
-        .form-field-wrapper {
+        form {
             position: relative;
             margin: 0 auto;
             max-width: 300px;
             width: 100%;
+        }
+
+        &.search-wrapper-flex {
+            display: flex;
+            align-items: center;
+
+            .btn {
+                margin-right: 10px;
+            }
+
+            form {
+                max-width: 100%;
+                width: 100%;
+            }
         }
     }
 
@@ -99,8 +118,9 @@ body {
         right: 3px;
     }
 
-    .main-wrapper {
-        margin-bottom: 0 0 15px;
+    .games-wrapper {
+        margin: 0 0 15px;
+
         @include breakpoint(min-tablet){
             display: flex;
             flex-wrap: wrap;
@@ -108,7 +128,7 @@ body {
         }
     }
 
-    .main-wrapper-item {
+    .games-wrapper-item {
         @include breakpoint(min-tablet){
             max-width: 25%;
             width: 25%;
@@ -117,7 +137,8 @@ body {
         }
     }
 
-    .main-wrapper-title {
+    .games-wrapper-title,
+    .game-inner-title {
         text-align: center;
         color: #fff;
         font-size: 14px;
@@ -126,11 +147,17 @@ body {
         max-width: 100%;
     }
 
-    .main-wrapper-image {
+    .games-wrapper-image {
         border-radius: 10px;
         background-size: cover;
         display: block;
         padding-bottom: 100%;
+    }
+
+    .game-inner-image {
+        border-radius: 10px;
+        padding-bottom: 230px;
+        background-size: cover;
     }
 
     .pagination {
@@ -150,9 +177,25 @@ body {
         height: 30px;
         width: 30px;
 
-        &:hover {
+        &:hover,
+        &.is-active {
             background-color: #db0f0f;
             color: #fff;
         }
+    }
+
+    .btn {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        color: #fff;
+        display: inline-block;
+        background-color: #f40f46;
+        border-radius: 10px;
+        padding: 10px 30px;
+    }
+
+    .cta-wrapper {
+        text-align: center;
     }
 }
